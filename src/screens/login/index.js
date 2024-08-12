@@ -36,7 +36,7 @@ export default function Login(){
         <View style={styles.inputContainer}>
           <View style={styles.passwordContainer}>
             <Text style={styles.label}>Senha</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('EsqueceuSenha')}>
               <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
             </TouchableOpacity>
           </View>

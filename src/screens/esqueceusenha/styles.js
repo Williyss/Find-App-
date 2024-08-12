@@ -1,21 +1,6 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    passwordContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    },
-    passwordInputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    },
-    eyeIcon: {
-    position: 'absolute',
-    right: 10,
-    top: '50%',
-    transform: [{ translateY: -12 }], // Ajuste conforme necessário
-    },
     logoContainer: {
       flex: 1,
       justifyContent: 'center', 
@@ -34,6 +19,12 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: '#FFFFFF',
     },
+    subtitle:{
+        marginTop: 5,
+      fontSize: 13,
+      fontWeight: 'bold',
+      color: '#FFFFFF',
+    },
     formContainer: {
       flex: 2,
       padding: 50, 
@@ -49,6 +40,7 @@ const styles = StyleSheet.create({
       fontSize: 14,
       color: '#FFFFFF',
       marginBottom: 6,
+      marginTop: 10,
     },
     input: {
   
@@ -58,6 +50,7 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 4,
       paddingHorizontal: 10,
+      paddingVertical: 10,
     },
     passwordContainer: {
       flexDirection: 'row',
