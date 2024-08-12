@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles';
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 export default function Login(){
 
@@ -9,6 +9,7 @@ export default function Login(){
     const navigation = useNavigation();
 
     return(
+      <ScrollView>
 <View style={{ flex: 1, backgroundColor: '#050521' }}>
       <View style={styles.logoContainer}>
         <Image
@@ -60,5 +61,6 @@ export default function Login(){
         </Text>
       </View>
     </View>
+    </ScrollView>
     );
 }

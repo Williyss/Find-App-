@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './styles'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
-export default function Cadastro2(){
+export default function Cadastro3(){
   const navigation = useNavigation();
     return(
-     
 <View style={{ flex: 1, backgroundColor: '#050521' }}>
       <View style={styles.logoContainer}>
         <Image
@@ -20,21 +19,10 @@ export default function Cadastro2(){
 
       <View style={styles.formContainer}>
         <View style={styles.inputContainer}>
-          <Text style={styles.label}>CEP</Text>
+          <Text style={styles.label}>Email</Text>
           <TextInput
             style={styles.input}
-            placeholder="12345-678"
-            keyboardType="numeric"
-            autoCapitalize="none"
-            required
-          />
-        </View>
-
-        <View style={styles.inputContainer}>
-          <Text style={styles.label}>Logradouro</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Logradouro"
+            placeholder="fulano@gmail.com"
             keyboardType="default"
             autoCapitalize="none"
             required
@@ -42,10 +30,10 @@ export default function Cadastro2(){
         </View>
 
         <View style={styles.inputContainer}>
-          <Text style={styles.label}>Bairro</Text>
+          <Text style={styles.label}>Senha</Text>
           <TextInput
             style={styles.input}
-            placeholder="Bairro"
+            placeholder="Senha"
             keyboardType="default"
             autoCapitalize="none"
             required
@@ -53,23 +41,21 @@ export default function Cadastro2(){
         </View>
 
         <View style={styles.inputContainer}>
-          <View style={styles.passwordContainer}>
-            <Text style={styles.label}>Cidade</Text>
-          </View>
+          <Text style={styles.label}>Confirmar Senha</Text>
           <TextInput
             style={styles.input}
-            placeholder="Cidade"
-            autoComplete="name"
+            placeholder="Senha"
+            keyboardType="default"
+            autoCapitalize="none"
             required
           />
-          
+
         </View>
 
-        <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('Cadastro3')}>
-          <Text style={styles.buttonText}>Próximo</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.buttonText}>Começar</Text>
         </TouchableOpacity>
       </View>
     </View>
-   
       );
 }
