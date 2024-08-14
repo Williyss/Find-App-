@@ -8,10 +8,9 @@ export default function Cadastro(){
 
 
     return(
-      // <ScrollView style={{width:'100%'}}>
-
+      <ScrollView style={{width:'100%', height:'100%'}}>
         <View style={{ flex: 1, backgroundColor: '#050521' }}>
-        <ScrollView style={{width:'100%'}}>
+      
               <View style={styles.logoContainer}>
                 <Image
                   source={require('../../assets/logo.png')}
@@ -74,9 +73,10 @@ export default function Cadastro(){
                 </TouchableOpacity>
 
               </View>
-              </ScrollView>
-            </View>    
-    // </ScrollView>
+       
+            </View>  
+            </ScrollView>  
+
 
 
     );

@@ -49,14 +49,14 @@ export default function Login(){
           />
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 
         <Text style={styles.footerText}>
           Não é membro?{' '}
           <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
-            <Text>Cadastre-se</Text>
+            <Text style={{color:'white'}}>Cadastre-se</Text>
           </TouchableOpacity>
         </Text>
       </View>
