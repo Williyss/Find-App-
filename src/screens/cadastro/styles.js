@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center', 
       alignItems: 'center', 
       marginTop: 100,
-      marginBottom: 20,
+      marginBottom: -50,
       padding: 5, 
     },
     logo: {
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
       flex: 2,
       padding: 50, 
       marginBottom:40,
-      marginTop: 20,
       justifyContent: 'center',
     },
     inputContainer: {
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     },
     button: {
       marginTop: 20,
-      backgroundColor: '#4F46E5',
+      backgroundColor: '#FF5800',
       padding: 12,
       borderRadius: 4,
       alignItems: 'center',

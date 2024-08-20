@@ -1,12 +1,11 @@
-
-import Route from "./src/routes";
-import Bottomnav from "./src/routes/bootomnavbar";
-
-
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Route from "./src/routes/index";
 
 export default function App() {
   return (
-
- <Bottomnav/>
+    <NavigationContainer>
+      <Route />
+    </NavigationContainer>
   );
 }

@@ -1,13 +1,44 @@
-
-// import { useNavigation, useRoute } from '@react-navigation/native'
-// import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
-
 import React from 'react';
-import Data from '../../Data/Data.js'
-import { useNavigation } from '@react-navigation/native';
-import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Image, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';  // Importa ícones da biblioteca
+import DATA from '../../Data/Data'; 
+import Bottomnav from '../../routes/bootomnavbar';
 
-// Exemplo de estilo básico para o componente
+export default function Home() {
+  return (
+    <>
+    <View style={styles.iconButtonContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}> // Coloquei "cadastro" só para testar se funcionava
+          <Icon name="plus" size={30} color="#000" />
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView>
+        <View>
+
+          {DATA.map((item) => (
+            <TouchableOpacity
+              key={item.id}
+              style={styles.containerJogos}
+              onPress={() => alert(`${item.nomeProduto} selected`)} // Adicionei um alerta para testar se o item é selecionável
+            >
+              <Image
+                style={styles.images}
+                source={{ uri: item.imgProduto }}
+              />
+              <View>
+                <Text style={styles.titulo}>{item.nomeProduto}</Text>
+                <Text style={styles.imgProduto}>{item.imgProduto}</Text>
+                <Text style={styles.imgLoja}>{item.imgLoja}</Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+    </>
+  );
+}
+
 const styles = StyleSheet.create({
   containerJogos: {
     flexDirection: 'row',
@@ -27,30 +58,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imgLoja: {
+    fontSize: 14,
+    color: '#555',
   },
   imgProduto: {
+    fontSize: 14,
+    color: '#999',
   }
 });
-
-export default function CardMovies({ id, nomeProduto, imgProduto, imgLoja }) {
-  const navigation = useNavigation();
-  const id = id;
-
-  return (
-    <TouchableOpacity
-      style={styles.containerJogos}
-      // onPress={() => navigation.navigate('Details', { nomeProduto, nota, imgProduto })}
-    >
-      <Image
-        style={styles.images}
-        source={{ uri: imgProduto }} // Usando URL da imagem do produto
-      />
-      <View>
-        <Text style={styles.titulo}>{nomeProduto}</Text>
-        <Text style={styles.imgProduto}>{imgProduto}</Text>
-        <Text style={styles.imgLoja}>{imgLoja}</Text>
-      </View>
-    </TouchableOpacity>
-  );
-}
-  

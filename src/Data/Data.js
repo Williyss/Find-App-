@@ -1,4 +1,4 @@
-const Data = [
+const DATA = [
   {
     id: '01',
     nomeProduto: 'Smartphone XYZ',
@@ -55,4 +55,4 @@ const Data = [
   }
 ];
 
-export default Data;
+export default DATA;
