@@ -17,7 +17,6 @@ export default function Login(){
           style={styles.logo}
           alt="Sua Empresa"
         />
-        <Text style={styles.title}>Entre na sua conta</Text>
       </View>
 
       <View style={styles.formContainer}>

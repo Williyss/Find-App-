@@ -1,18 +1,19 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import * as React from 'react';
-import { NavigationContainer } from "@react-navigation/native";
-import Route from '.';
-        
+import Home from '../screens/home';
+import Chat from '../screens/chat';
+import Categorias from '../screens/categorias';
+import Moments from '../screens/moments';
+
 const Tab = createBottomTabNavigator();
-        
+
 export default function Bottomnav() {
   return (
-    <NavigationContainer>
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Route} />
-      <Tab.Screen name="Chat" component={Route} />
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Chat" component={Chat} />
+      <Tab.Screen name="Categorias" component={Categorias} />
+      <Tab.Screen name="Moments" component={Moments} />
     </Tab.Navigator>
-    </NavigationContainer>
-
   );
 }

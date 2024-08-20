@@ -1,25 +1,23 @@
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../screens/login';
 import Cadastro from '../screens/cadastro';
 import Cadastro2 from '../screens/cadastro2';
 import Cadastro3 from '../screens/cadastro3';
 import EsqueceuSenha from '../screens/esqueceusenha';
-import Home from '../screens/home';
-import Chat from '../screens/chat';
+import Bottomnav from './bootomnavbar'; 
 
-export default function Route(){
-const stack = createStackNavigator();
+const Stack = createStackNavigator();
 
-return (
-    <stack.Navigator>
-      <stack.Screen name="Login" component={Login}></stack.Screen>
-      <stack.Screen name="Cadastro" component={Cadastro}></stack.Screen>
-      <stack.Screen name="Cadastro2" component={Cadastro2}></stack.Screen>
-      <stack.Screen name="Cadastro3" component={Cadastro3}></stack.Screen>
-      <stack.Screen name="EsqueceuSenha" component={EsqueceuSenha}></stack.Screen>
-      <stack.Screen name="Home" component={Home}></stack.Screen>
-      <stack.Screen name="Chat" component={Chat}></stack.Screen>
-    </stack.Navigator>
-);
+export default function Route() {
+  return (
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Cadastro" component={Cadastro} />
+      <Stack.Screen name="Cadastro2" component={Cadastro2} />
+      <Stack.Screen name="Cadastro3" component={Cadastro3} />
+      <Stack.Screen name="EsqueceuSenha" component={EsqueceuSenha} />
+      <Stack.Screen name="Home" component={Bottomnav} />  
+    </Stack.Navigator>
+  );
 }

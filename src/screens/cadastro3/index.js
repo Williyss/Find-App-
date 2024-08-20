@@ -13,8 +13,6 @@ export default function Cadastro3(){
           style={styles.logo}
           alt="Sua Empresa"
         />
-         <Text style={styles.title}>CADASTRE-SE</Text>
-         <Text style={styles.subtitle}>INSIRA OS DADOS</Text>
       </View>
 
       <View style={styles.formContainer}>
